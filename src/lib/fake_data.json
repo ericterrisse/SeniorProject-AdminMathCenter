@@ -1,0 +1,602 @@
+[
+  {
+    "id": "2f6f97fc-65ec-4b0e-814a-bd2ef1121627",
+    "name": "Micheal Gulgowski",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T23:18:23.947Z"
+  },
+  {
+    "id": "a5487bed-2183-4713-8f8b-0510a37bcb79",
+    "name": "Eugene Schmidt",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T09:23:04.930Z"
+  },
+  {
+    "id": "61a0379b-c7f5-4d79-924c-2673083cbb27",
+    "name": "Angel Boyer",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T20:05:39.365Z"
+  },
+  {
+    "id": "a4634543-c3b9-485a-96c2-4dc038261605",
+    "name": "Susie Koepp",
+    "class": "Biology",
+    "checkInTime": "2024-02-29T01:55:48.835Z"
+  },
+  {
+    "id": "63eb905d-3665-4a34-9c27-1bd30265b826",
+    "name": "Dennis Batz",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T09:59:13.138Z"
+  },
+  {
+    "id": "6cfd6e3e-ddca-4f88-a2ce-3680112589bb",
+    "name": "Dennis Lebsack",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T13:01:18.895Z"
+  },
+  {
+    "id": "6f0b7688-41eb-49b7-8fd2-e8442c71fc07",
+    "name": "Byron Cole",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T19:55:38.020Z"
+  },
+  {
+    "id": "45926f03-a716-422c-b606-74399c44787d",
+    "name": "Ms. Cora Stokes-Koelpin",
+    "class": "Stats",
+    "checkInTime": "2024-02-29T02:29:33.789Z"
+  },
+  {
+    "id": "31d88bc8-774c-4462-a872-6c5612d66266",
+    "name": "Audrey Vandervort",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T14:00:42.730Z"
+  },
+  {
+    "id": "c32006a7-75b3-4cac-b1fe-9935cffd4060",
+    "name": "Ms. Theresa Johnston",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T16:08:28.337Z"
+  },
+  {
+    "id": "55245db7-2622-4430-8e9d-84ede5e8cb0f",
+    "name": "Cora Schuppe",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T05:13:19.523Z"
+  },
+  {
+    "id": "3d02ee9d-0d6b-485d-bdde-3f756927c46b",
+    "name": "Henrietta Bednar",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T07:14:22.347Z"
+  },
+  {
+    "id": "6680e962-5aa1-4c12-ac25-78e2204182b4",
+    "name": "Dolores Brakus IV",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T05:02:26.451Z"
+  },
+  {
+    "id": "41627edf-fac6-4a52-a6b1-305d22ea13b6",
+    "name": "Sonja Huel",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T13:43:55.389Z"
+  },
+  {
+    "id": "371f5c26-0258-46bb-92db-e8d21613bbf3",
+    "name": "Kevin Yundt PhD",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T05:57:33.133Z"
+  },
+  {
+    "id": "c231fdac-3762-4f63-a859-15bbb8f7de58",
+    "name": "Joann Beer",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T14:54:16.725Z"
+  },
+  {
+    "id": "5449fdcc-f5a6-4a85-b549-6ed36a05605a",
+    "name": "Kayla Miller",
+    "class": "Math I",
+    "checkInTime": "2024-02-29T03:35:07.619Z"
+  },
+  {
+    "id": "f0080ff8-9fcc-4b37-9186-6772680b0258",
+    "name": "Rosa Kris MD",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T08:48:02.576Z"
+  },
+  {
+    "id": "8796c117-c071-4cb4-9ecb-d9c5b4f2f93f",
+    "name": "Sheryl White",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T06:40:05.106Z"
+  },
+  {
+    "id": "f7371352-5a20-4778-bfc3-e7fc55c7a606",
+    "name": "Angelina Greenfelder Jr.",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T05:53:12.602Z"
+  },
+  {
+    "id": "8286bf40-fe37-485d-b94c-d9d1956ea94e",
+    "name": "Garrett Morar",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T10:14:03.217Z"
+  },
+  {
+    "id": "1c5d7537-68d3-47c4-bc10-bfbfca0254d8",
+    "name": "Herman Bogan",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T10:26:43.697Z"
+  },
+  {
+    "id": "8e0e3076-43c2-4276-b9ef-a40f16c76940",
+    "name": "Nadine Heathcote",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T11:55:39.396Z"
+  },
+  {
+    "id": "b585bc07-f6a6-441d-a919-86b571ff719c",
+    "name": "Sheryl Davis",
+    "class": "Math II",
+    "checkInTime": "2024-02-29T03:13:23.748Z"
+  },
+  {
+    "id": "4f92a0f5-58b2-456c-818d-ecc2ae59bef8",
+    "name": "Brandon Bogan",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T06:35:21.361Z"
+  },
+  {
+    "id": "d7ce3924-605b-4bf7-a83d-86429bdf84f6",
+    "name": "Desiree Bartoletti",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T09:53:00.125Z"
+  },
+  {
+    "id": "e800dc8b-b328-4950-bc88-f98a56b5e5f2",
+    "name": "Randy Mayert",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-29T03:00:16.735Z"
+  },
+  {
+    "id": "e52e999e-7039-455d-9fa2-31b5088418d0",
+    "name": "Leon Crooks",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T20:07:53.775Z"
+  },
+  {
+    "id": "b102e18c-4542-4c15-a763-3ce5547d373d",
+    "name": "Lee Yundt",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T10:31:21.081Z"
+  },
+  {
+    "id": "bdef09ae-c2a3-4e3d-8be6-853ab75a2d1b",
+    "name": "Rodolfo Jacobson",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T19:06:47.626Z"
+  },
+  {
+    "id": "05887893-9143-4e49-96ac-0d5aaa671bb8",
+    "name": "Rafael Kuphal",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T19:37:22.733Z"
+  },
+  {
+    "id": "e0d6997d-f368-4cc1-adb8-7a625b1ea74f",
+    "name": "Sandra Frami",
+    "class": "Biology",
+    "checkInTime": "2024-02-29T00:32:27.756Z"
+  },
+  {
+    "id": "60271ae3-a011-48f5-a925-2765f8cc5f3d",
+    "name": "Julian Gibson",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T11:00:54.243Z"
+  },
+  {
+    "id": "d8746890-26ca-4af3-bc07-3a6a3f814cc1",
+    "name": "Tyler Doyle",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T15:31:01.617Z"
+  },
+  {
+    "id": "9c048787-3c7f-48a7-b06c-54f5f8765daf",
+    "name": "Dr. Tyrone Jacobs",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T15:07:56.721Z"
+  },
+  {
+    "id": "5f0cea3b-7528-4508-9499-388b2018e844",
+    "name": "Kelly Mann",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T05:30:55.818Z"
+  },
+  {
+    "id": "8f0a6bf7-c195-4f52-97c0-66e516258833",
+    "name": "Nettie Schinner MD",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T10:20:39.070Z"
+  },
+  {
+    "id": "5d105a94-2758-4c3a-a20e-59efdbc1fffe",
+    "name": "Mrs. Melanie Maggio",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T06:47:27.274Z"
+  },
+  {
+    "id": "a20437b0-7105-4722-b9ba-9dc3232a9d14",
+    "name": "Jackie Johns",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T09:27:22.757Z"
+  },
+  {
+    "id": "a6897b41-9483-4478-bf7a-246d1ad42685",
+    "name": "Bridget Bernier",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T20:23:47.114Z"
+  },
+  {
+    "id": "004a9331-5733-4a92-8a5d-d32291a76836",
+    "name": "Marco Stoltenberg",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T21:24:04.334Z"
+  },
+  {
+    "id": "ecf03e5b-da90-4f79-a01d-ce8dd35c3746",
+    "name": "Melissa Spencer",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T05:05:07.594Z"
+  },
+  {
+    "id": "86777ed8-e3a6-49e0-b331-f2487acc46c1",
+    "name": "Randal Daniel MD",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T18:54:17.613Z"
+  },
+  {
+    "id": "d835bd49-bee5-407e-bced-da7a7773be4f",
+    "name": "Dr. Robert Carter",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T12:36:51.752Z"
+  },
+  {
+    "id": "28d5dc43-f08f-4e5a-882d-4743fa339cf0",
+    "name": "Brendan Hand",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T09:43:17.708Z"
+  },
+  {
+    "id": "8bc369be-c236-4397-bf07-bd3c947d25ed",
+    "name": "Louis Hermann",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T18:08:35.047Z"
+  },
+  {
+    "id": "87333b79-7f7a-4021-a7b2-e89673abc44a",
+    "name": "Naomi Purdy",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T04:41:37.546Z"
+  },
+  {
+    "id": "f69067fe-c791-4199-b685-8c813a1288d2",
+    "name": "Patti Wintheiser",
+    "class": "Stats",
+    "checkInTime": "2024-02-29T03:17:47.019Z"
+  },
+  {
+    "id": "c50ccfb0-accd-494f-9b74-37d4fadf8853",
+    "name": "Nathan Auer",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T10:01:08.717Z"
+  },
+  {
+    "id": "09306a1b-39a9-46e6-8e8e-1698672caa3e",
+    "name": "Louise Mosciski",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T12:34:01.492Z"
+  },
+  {
+    "id": "400fef1f-89b0-49e4-ad54-e089cacc8542",
+    "name": "Sherman Gerlach",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T23:44:53.434Z"
+  },
+  {
+    "id": "412f6f7b-99df-4aa2-9254-13885441d40a",
+    "name": "Amy Ullrich V",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T16:56:18.051Z"
+  },
+  {
+    "id": "7c84b08f-74cf-4726-a8fd-e8253397edd3",
+    "name": "Mrs. Geneva Legros",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-29T01:23:36.151Z"
+  },
+  {
+    "id": "fc2575c5-957c-46e7-9d07-81cf66501aca",
+    "name": "Daisy Schmidt",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T21:08:53.345Z"
+  },
+  {
+    "id": "c40a8547-6f5d-48f0-ad49-283ffbc29b7d",
+    "name": "April Powlowski-Hyatt",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T04:32:37.920Z"
+  },
+  {
+    "id": "847094ee-f87c-4bdf-b366-964543949558",
+    "name": "Dr. Alton Effertz",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T15:46:45.482Z"
+  },
+  {
+    "id": "b122a661-d984-4546-9f30-8ae8b4d9fe41",
+    "name": "Bryant Terry",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T22:17:50.738Z"
+  },
+  {
+    "id": "6e993568-9821-412f-83ef-6ad6f0923068",
+    "name": "Mamie Stark",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T05:47:56.253Z"
+  },
+  {
+    "id": "a87fcfcc-4377-4e59-bb82-4e206fbf16e4",
+    "name": "Arlene Gutkowski Sr.",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T15:09:03.040Z"
+  },
+  {
+    "id": "d82889a3-2180-47e8-a62d-a445706c91ba",
+    "name": "Elizabeth Mraz",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T04:33:04.634Z"
+  },
+  {
+    "id": "2175aafd-b059-4fd0-b2d2-cbb2f8ced7a5",
+    "name": "Kellie Gleichner",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T21:06:52.731Z"
+  },
+  {
+    "id": "737ef3b7-e5b2-45f2-969d-558dd7f47897",
+    "name": "Sherman Carter",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T11:10:26.771Z"
+  },
+  {
+    "id": "5b199ba7-0705-4620-9f64-8d15e4266a90",
+    "name": "Raymond Flatley Sr.",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T04:20:53.330Z"
+  },
+  {
+    "id": "d0a494ae-d73b-4b02-8eb7-f9c691d61221",
+    "name": "Ricardo Runolfsdottir",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T16:47:09.878Z"
+  },
+  {
+    "id": "5ea507aa-272b-466d-9cb4-bbd83ca8253c",
+    "name": "Lucille Ryan",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T16:18:38.977Z"
+  },
+  {
+    "id": "315ef383-11af-442a-a64c-2426f7e404ee",
+    "name": "Nancy Williamson",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T18:17:51.181Z"
+  },
+  {
+    "id": "660a18b5-ea0a-4d27-84a4-0a352a638eba",
+    "name": "Boyd Berge",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T20:09:08.893Z"
+  },
+  {
+    "id": "0da6417d-6457-47a9-ae45-527d3c23c600",
+    "name": "Daryl Franey",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T03:55:17.226Z"
+  },
+  {
+    "id": "e3991107-0c5c-455f-ba2f-d3b520d8086d",
+    "name": "Fernando Bednar",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-29T02:18:43.767Z"
+  },
+  {
+    "id": "212378e6-0d1d-460e-b700-dda20d5e1f7f",
+    "name": "Candice Bechtelar",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T08:27:44.199Z"
+  },
+  {
+    "id": "7e9fea00-9b67-4f4e-907c-83109a0e2fb2",
+    "name": "Keith Hudson",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T05:23:09.091Z"
+  },
+  {
+    "id": "a5c65ca4-9292-4a48-a3b3-1d27238a98bd",
+    "name": "Jana Kris",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T21:33:24.423Z"
+  },
+  {
+    "id": "74b803d3-f742-404a-8008-744e4e1f8d73",
+    "name": "Dora Huel",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T13:00:11.682Z"
+  },
+  {
+    "id": "f2ae9147-0794-4dae-b7f4-3bf8889e09b5",
+    "name": "Darla Welch",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T12:32:29.269Z"
+  },
+  {
+    "id": "b1c758ad-5184-484f-9fd5-222e78e1934d",
+    "name": "Marjorie Quigley",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T18:01:07.391Z"
+  },
+  {
+    "id": "26ad05f9-60b4-4e3a-80ae-6ad8a5ea0db2",
+    "name": "Bradley Kovacek",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T15:03:50.541Z"
+  },
+  {
+    "id": "0cbcffde-e4eb-42f1-8c4d-03213a236e60",
+    "name": "Clyde Kessler",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T12:12:47.989Z"
+  },
+  {
+    "id": "e54b7eec-ceab-434b-bca7-1e2d0e651f97",
+    "name": "Christian Jerde IV",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T03:55:33.357Z"
+  },
+  {
+    "id": "6fa8c730-cfc1-49fa-a619-7b31c80ff37d",
+    "name": "Ramon Friesen",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T23:02:04.384Z"
+  },
+  {
+    "id": "5b862fe2-388f-4e9f-ba35-0373d8d0a1fe",
+    "name": "Blake Boyle",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T22:34:50.990Z"
+  },
+  {
+    "id": "855cdaa7-4f1b-42be-8923-1a52aac9842e",
+    "name": "Jonathan Runte",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T23:21:10.908Z"
+  },
+  {
+    "id": "cf981a0d-12d9-4496-8af2-3e35dca4831b",
+    "name": "Shelley Ullrich",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T12:23:29.420Z"
+  },
+  {
+    "id": "3e85f3a4-768f-4d1d-ad44-44900053d5b3",
+    "name": "Christopher Bartoletti",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T03:40:53.970Z"
+  },
+  {
+    "id": "5eb53eb5-3f66-43de-a3e2-b624bab04a48",
+    "name": "Anita Beahan",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T12:58:56.869Z"
+  },
+  {
+    "id": "d4dae4ef-530e-4c9e-9b1d-399b748a5836",
+    "name": "Annie Maggio",
+    "class": "Math I",
+    "checkInTime": "2024-02-29T00:19:35.328Z"
+  },
+  {
+    "id": "70f0971d-fcc8-4975-abd1-143b98d6ade8",
+    "name": "Josefina Balistreri",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T16:07:48.985Z"
+  },
+  {
+    "id": "63f10e3d-0110-433a-99fd-ab0c96baef03",
+    "name": "Preston Hane",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T13:55:22.942Z"
+  },
+  {
+    "id": "51801f14-47c2-4294-b484-46ce5f68ff1e",
+    "name": "Toni Lind V",
+    "class": "Computer Science II",
+    "checkInTime": "2024-02-28T21:09:39.361Z"
+  },
+  {
+    "id": "5df49a2d-992b-42be-88e4-deb9df0728fa",
+    "name": "Audrey Spencer",
+    "class": "Math I",
+    "checkInTime": "2024-02-29T02:58:38.253Z"
+  },
+  {
+    "id": "b9f0490a-473e-44da-9f59-935aca3fa3ee",
+    "name": "Guillermo Torp",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T12:53:23.072Z"
+  },
+  {
+    "id": "d9850977-51f3-4a79-956e-68582b53fc56",
+    "name": "Francis Gislason",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T11:16:12.011Z"
+  },
+  {
+    "id": "728a3d10-9aa9-46c1-a725-7743a863a1d5",
+    "name": "Victoria Yost",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T11:52:00.327Z"
+  },
+  {
+    "id": "c69d09bc-d490-468e-928d-f9f17dea43a5",
+    "name": "Mrs. Doris Johnson",
+    "class": "Math I",
+    "checkInTime": "2024-02-28T23:21:51.101Z"
+  },
+  {
+    "id": "3a22bdb4-f9a9-47c1-ae42-c21318fb6b2b",
+    "name": "Francis Batz",
+    "class": "Math II",
+    "checkInTime": "2024-02-28T21:02:36.362Z"
+  },
+  {
+    "id": "370ed28a-8017-47fc-9550-1804c5caefe9",
+    "name": "Shannon Goyette",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T08:02:07.740Z"
+  },
+  {
+    "id": "0775293c-0bed-4c9a-bd47-2850c3b25fc7",
+    "name": "Steven Jones",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T21:10:27.102Z"
+  },
+  {
+    "id": "9f4c10c3-0544-4c04-87f3-e30823ee06f9",
+    "name": "Melody Orn",
+    "class": "Biology",
+    "checkInTime": "2024-02-28T21:59:45.221Z"
+  },
+  {
+    "id": "3bad701c-7507-4981-9390-c8df865cf1db",
+    "name": "Everett Kessler",
+    "class": "Stats",
+    "checkInTime": "2024-02-28T12:05:18.882Z"
+  },
+  {
+    "id": "6b668b82-14fc-4d2b-b801-a2f03212e13c",
+    "name": "Armando Grimes",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T08:38:05.375Z"
+  },
+  {
+    "id": "1885ed02-349b-46aa-992d-b1e642e8fa7a",
+    "name": "Becky Batz",
+    "class": "Computer Science I",
+    "checkInTime": "2024-02-28T21:03:27.158Z"
+  }
+]
