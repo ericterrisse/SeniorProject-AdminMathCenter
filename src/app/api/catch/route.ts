@@ -21,6 +21,7 @@ app.post(`/api/catch`, async (req, res) => {
             },
         });
 
+
         const studentTracker = await prisma.studentTracker.create({
             data: {
                 className: classId as ClassName,
