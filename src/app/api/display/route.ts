@@ -7,32 +7,34 @@ const app = express()
 app.use(express.json())
 
 app.get(`/api/display`, async (req, res) => {
-    //add error handling
-    // const studentTrackers = await prisma.studentTracker.findMany({
-    //         include: {
-    //             student: {
-    //                 select: {
-    //                     firstName: true,
-    //                     lastName: true,
-    //                     fullname: {
-    //                         _expression: '"firstName" || \' \' || "lastName"',
-    //                     },
-    //                 },
-    //             },
-    //             className: true,
-    //         },
-    //     });
+try{
+    const student = await prisma.student.findMany({
+        select:{
+            firstName:true,
+            lastName:true,
+            StudentTracker:{
+                select:{
+                    checkInTime: true,
+                    className: true,
+                }
+            }
+        }
+    });
 
-    //     const studentInfo = studentTrackers.map(tracker => ({
-    //         name: tracker.student.fullName,
-    //         classId: tracker.className.id,
-    //         checkInTime: tracker.checkInTime,
-    //     }));
+    const formattedStudents = student.map(student => ({
+        fullname: `${student.firstName} ${student.lastName}`,
+        StudentTracker: student.StudentTracker
+    }));
 
-    //     res.json(studentInfo); 
-})
+    res.json(formattedStudents);
+    } catch (error) {
+    console.error('Error fetching students:', error);
+    res.status(500).json({ error: 'Failed to fetch students' });
+    }
 
-//running on different port bc it works for some reason
+
+});
+
 const server = app.listen(3007, () =>
-  console.log(`Server ready at: http://localhost:3006`),
+  console.log(`Server ready at: http://localhost:3007`),
 )
