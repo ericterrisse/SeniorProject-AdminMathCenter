@@ -23,6 +23,7 @@ enum ClassName {
 
 model Student {
   id             Int              @id @default(autoincrement())
+  studentId      String           @unique   
   firstName      String
   lastName       String
   StudentTracker StudentTracker[] // created by prisma: is a list of all the times one student has been in StudentTracker
@@ -32,8 +33,8 @@ model Student {
 model StudentTracker {
   id        Int       @id @default(autoincrement())
   className ClassName
-  student   Student   @relation(fields: [studentId], references: [id])
-  studentId Int
+  student   Student   @relation(fields: [studentId], references: [studentId])
+  studentId String
   checkInTime DateTime
 }
 
