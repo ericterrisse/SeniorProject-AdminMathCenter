@@ -22,10 +22,14 @@ try{
         }
     });
 
-    const formattedStudents = student.map(student => ({
-        fullname: `${student.firstName} ${student.lastName}`,
-        StudentTracker: student.StudentTracker
-    }));
+    const formattedStudents = student.flatMap(student => {
+        return student.StudentTracker.map(tracker=>({
+            fullname: `${student.firstName} ${student.lastName}`,
+            className: tracker.className,
+            checkInTime: tracker.checkInTime
+        }));
+        
+    });
 
     res.json(formattedStudents);
     } catch (error) {

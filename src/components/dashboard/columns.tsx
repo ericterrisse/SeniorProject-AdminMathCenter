@@ -6,9 +6,9 @@ import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
 
 export type Student = {
-//	id: string;
 	fullname: string;
-	StudentTracker: { className: string; checkInTime: string }[];
+	className: string; 
+	checkInTime: string;
 };
 export const columns: ColumnDef<Student>[] = [
 	{
@@ -27,6 +27,7 @@ export const columns: ColumnDef<Student>[] = [
 		cell: ({ row }) => {
 			const { fullname } = row.original;
 			return <div>{fullname}</div>
+
 		},
 	},
 	{
@@ -43,17 +44,8 @@ export const columns: ColumnDef<Student>[] = [
 			);
 		},
 		cell: ({ row }) => {
-            const { StudentTracker } = row.original;
-            if (StudentTracker && StudentTracker.length > 0) {
-                return (
-                    <div>
-                        {StudentTracker.map((tracker, index) => (
-                            <div key={index}>{tracker.className}</div>
-                        ))}
-                    </div>
-                );
-            }
-            return <div>No classes found</div>;
+             const { className } = row.original;
+             return <div>{className}</div>;
         },
 	},
 	{
@@ -70,17 +62,8 @@ export const columns: ColumnDef<Student>[] = [
 			);
 		},
 		cell: ({ row }) => {
-            const { StudentTracker } = row.original;
-            if (StudentTracker && StudentTracker.length > 0) {
-                return (
-                    <div>
-                        {StudentTracker.map((tracker, index) => (
-                            <div key={index}>{dayjs(tracker.checkInTime).format("DD/MM/YYYY HH:mm")}</div>
-                        ))}
-                    </div>
-                );
-            }
-            return <div>No check-in times found</div>;
+            const { checkInTime } = row.original;
+            return <div>{dayjs(checkInTime).format("DD/MM/YYYY HH:mm")}</div>
         },
 	},
 ];
