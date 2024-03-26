@@ -6,14 +6,13 @@ import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
 
 export type Student = {
-	id: string;
-	name: string;
-	class: string;
-	checkInTime: string;
+//	id: string;
+	fullname: string;
+	StudentTracker: { className: string; checkInTime: string }[];
 };
 export const columns: ColumnDef<Student>[] = [
 	{
-		accessorKey: "name",
+		accessorKey: "fullname",
 		header: ({ column }) => {
 			return (
 				<Button
@@ -25,9 +24,13 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
+		cell: ({ row }) => {
+			const { fullname } = row.original;
+			return <div>{fullname}</div>
+		},
 	},
 	{
-		accessorKey: "class",
+		accessorKey: "className",
 		header: ({ column }) => {
 			return (
 				<Button
@@ -39,6 +42,19 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
+		cell: ({ row }) => {
+            const { StudentTracker } = row.original;
+            if (StudentTracker && StudentTracker.length > 0) {
+                return (
+                    <div>
+                        {StudentTracker.map((tracker, index) => (
+                            <div key={index}>{tracker.className}</div>
+                        ))}
+                    </div>
+                );
+            }
+            return <div>No classes found</div>;
+        },
 	},
 	{
 		accessorKey: "checkInTime",
@@ -54,9 +70,17 @@ export const columns: ColumnDef<Student>[] = [
 			);
 		},
 		cell: ({ row }) => {
-			const dateTime: string = row.getValue("checkInTime");
-
-			return <div>{dayjs(dateTime).format("DD/MM/YYYY HH:mm")}</div>;
-		},
+            const { StudentTracker } = row.original;
+            if (StudentTracker && StudentTracker.length > 0) {
+                return (
+                    <div>
+                        {StudentTracker.map((tracker, index) => (
+                            <div key={index}>{dayjs(tracker.checkInTime).format("DD/MM/YYYY HH:mm")}</div>
+                        ))}
+                    </div>
+                );
+            }
+            return <div>No check-in times found</div>;
+        },
 	},
 ];
