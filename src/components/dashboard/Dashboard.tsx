@@ -6,10 +6,12 @@ import { columns } from "./columns";
 import BarChar from "./BarChar";
 import Item from "./Item";
 import ItemPicker from "./ItemPicker";
+import {getStudents} from "@/lib/display"
 
 interface StudentData {
 	fullname: string;
-	StudentTracker: { className: string; checkInTime: string}[];
+	className: string; 
+	checkInTime: string;
 }
 const Dashboard = () => {
 	const [students, setStudents] = useState<StudentData[]>([]);
