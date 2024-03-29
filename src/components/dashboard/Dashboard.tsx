@@ -6,7 +6,6 @@ import { columns } from "./columns";
 import BarChar from "./BarChar";
 import Item from "./Item";
 import ItemPicker from "./ItemPicker";
-import {getStudents} from "@/lib/display"
 
 interface StudentData {
 	fullname: string;
@@ -19,7 +18,7 @@ const Dashboard = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-			const response = await fetch('http://localhost:3007/api/display');
+			const response = await fetch('http://localhost:3006/api/display');
 			if (!response.ok) {
 				throw new Error('failed to get data');
 			}
