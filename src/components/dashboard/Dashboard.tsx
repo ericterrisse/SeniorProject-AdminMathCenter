@@ -6,6 +6,7 @@ import { columns } from "./columns";
 import BarChar from "./BarChar";
 import Item from "./Item";
 import ItemPicker from "./ItemPicker";
+import { startOfWeek, endOfWeek, startofMonth } from 'date-fns';	
 
 interface StudentData {
 	fullname: string;
@@ -14,6 +15,8 @@ interface StudentData {
 }
 const Dashboard = () => {
 	const [students, setStudents] = useState<StudentData[]>([]);
+	const [studentsWeek, setStudentsWeek] = useState<StudentData[]>([]);
+	//const [weeklystudents, setWeeklystudents] = useState(0)
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -23,13 +26,42 @@ const Dashboard = () => {
 				throw new Error('failed to get data');
 			}
 			const data = await response.json();
+			console.log(data);
 			setStudents(data);
 			} catch (error) {
 				console.error('error:', error);
 			}
 		};
+		const fetchDataWeek = async () => {
+			try {
+			const response = await fetch('http://localhost:3006/api/studentTracker');
+			if (!response.ok) {
+				throw new Error('failed to get data');
+			}
+			const data = await response.json();
+
+			const start = new Date(startOfWeek(new Date, {weekStartsOn: 1})).getTime()
+			const end = new Date(endOfWeek(new Date, {weekStartsOn: 1})).getTime()
+			
+			const studentsWeek = data.filter((s) => {
+				new Date(s.checkInTime).getTime() > start;
+				// new Date(s.checkInTime).getTime() < end;	
+
+			} )
+			console.log('students week: ', studentsWeek.length)
+			setStudentsWeek(data);
+			} catch (error) {
+				console.error('error:', error);
+			}
+		};
 	fetchData();
+	fetchDataWeek();
 	}, []);
+
+	console.log(students)
+	console.log(studentsWeek)
+
+
 
 	return (
 		<div className="p-10 flex flex-col gap-10">
