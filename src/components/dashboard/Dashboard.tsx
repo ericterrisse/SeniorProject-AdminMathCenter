@@ -6,60 +6,79 @@ import { columns } from "./columns";
 import BarChar from "./BarChar";
 import Item from "./Item";
 import ItemPicker from "./ItemPicker";
-import { startOfWeek, endOfWeek, startofMonth } from 'date-fns';	
+import { startOfWeek, endOfWeek, startOfMonth, endOfMonth } from 'date-fns';	
 
 interface StudentData {
 	fullname: string;
 	className: string; 
 	checkInTime: string;
 }
+
+interface StudentTrack {
+	studentId: string; 
+	checkInTime: Date;
+}
 const Dashboard = () => {
 	const [students, setStudents] = useState<StudentData[]>([]);
-	const [studentsWeek, setStudentsWeek] = useState<StudentData[]>([]);
+	const [studentsWeek, setStudentsWeek] = useState<StudentTrack[]>([]);
+	const [studentsMonth, setStudentsMonth] = useState<StudentTrack[]>([]);
 	//const [weeklystudents, setWeeklystudents] = useState(0)
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
+			//gets fullname, className, checkInTime to fill table
 			const response = await fetch('http://localhost:3006/api/display');
 			if (!response.ok) {
 				throw new Error('failed to get data');
 			}
 			const data = await response.json();
-			console.log(data);
+			//console.log(data);
 			setStudents(data);
 			} catch (error) {
 				console.error('error:', error);
 			}
 		};
-		const fetchDataWeek = async () => {
+		const fetchDataMW = async () => {
 			try {
+			//gets distinct studentId and also the most recent time a student checked in
 			const response = await fetch('http://localhost:3006/api/studentTracker');
 			if (!response.ok) {
 				throw new Error('failed to get data');
 			}
 			const data = await response.json();
 
-			const start = new Date(startOfWeek(new Date, {weekStartsOn: 1})).getTime()
-			const end = new Date(endOfWeek(new Date, {weekStartsOn: 1})).getTime()
+			const startWeek = new Date(startOfWeek(new Date, {weekStartsOn: 1})).getTime()
+			const endWeek = new Date(endOfWeek(new Date, {weekStartsOn: 1})).getTime()
 			
+			//finding checkInTimes that occurred 'this' week
 			const studentsWeek = data.filter((s) => {
-				new Date(s.checkInTime).getTime() > start;
-				// new Date(s.checkInTime).getTime() < end;	
+				const checkInTime = new Date(s.checkInTime).getTime();
+    			return checkInTime > startWeek && checkInTime < endWeek;	
+			})
+			setStudentsWeek(studentsWeek.length);
 
-			} )
-			console.log('students week: ', studentsWeek.length)
-			setStudentsWeek(data);
+
+			const startMonth = new Date(startOfMonth(new Date).getTime())
+			const endMonth = new Date(endOfMonth(new Date).getTime())
+
+			//finding checkInTimes that occurred 'this' month
+			const studentsMonth = data.filter((s) =>{
+				const checkInTime = new Date(s.checkInTime).getTime();
+				return checkInTime >= startMonth && checkInTime <= endMonth;
+			})
+			setStudentsMonth(studentsMonth.length);
+
 			} catch (error) {
 				console.error('error:', error);
 			}
 		};
 	fetchData();
-	fetchDataWeek();
+	fetchDataMW();
 	}, []);
 
-	console.log(students)
-	console.log(studentsWeek)
+	//console.log(students)
+	//console.log(studentsWeek)
 
 
 
@@ -69,11 +88,11 @@ const Dashboard = () => {
 				<ItemPicker />
 				<Item
 					title="Students this week"
-					text="This week 34 students have visited the center"
+					text={"This week "+studentsWeek+" students have visited the center"}
 				/>
 				<Item
 					title="Students this month"
-					text="This month 134 students have visited the center"
+					text={"This month "+studentsMonth+" students have visited the center"}
 				/>
 				<Item
 					title="Most popular class"
