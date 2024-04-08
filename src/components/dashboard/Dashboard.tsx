@@ -59,8 +59,8 @@ const Dashboard = () => {
 			setStudentsWeek(studentsWeek.length);
 
 
-			const startMonth = new Date(startOfMonth(new Date).getTime())
-			const endMonth = new Date(endOfMonth(new Date).getTime())
+			const startMonth = new Date(startOfMonth(new Date)).getTime()
+			const endMonth = new Date(endOfMonth(new Date)).getTime()
 
 			//finding checkInTimes that occurred 'this' month
 			const studentsMonth = data.filter((s) =>{
