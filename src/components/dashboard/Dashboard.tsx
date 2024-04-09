@@ -14,10 +14,6 @@ interface StudentData {
 	checkInTime: string;
 }
 
-interface StudentTrack {
-	studentId: string; 
-	checkInTime: Date;
-}
 const Dashboard = () => {
 	const [students, setStudents] = useState<StudentData[]>([]);
 	const [monthlyClass, setMonthlyClass] = useState<string>("");
