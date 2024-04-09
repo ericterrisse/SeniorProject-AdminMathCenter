@@ -20,9 +20,9 @@ interface StudentTrack {
 }
 const Dashboard = () => {
 	const [students, setStudents] = useState<StudentData[]>([]);
-	const [studentsWeek, setStudentsWeek] = useState<StudentTrack[]>([]);
-	const [studentsMonth, setStudentsMonth] = useState<StudentTrack[]>([]);
-	//const [weeklystudents, setWeeklystudents] = useState(0)
+	const [monthlyClass, setMonthlyClass] = useState<string>("");
+	const [studentsWeek, setStudentsWeek] = useState<number>(0);
+	const [studentsMonth, setStudentsMonth] = useState<number>(0);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -33,8 +33,34 @@ const Dashboard = () => {
 				throw new Error('failed to get data');
 			}
 			const data = await response.json();
-			//console.log(data);
 			setStudents(data);
+
+			const startMonth = new Date(startOfMonth(new Date)).getTime()
+			const endMonth = new Date(endOfMonth(new Date)).getTime()
+			const monthlyClass = data.filter((s)=>{
+				const checkInTime = new Date(s.checkInTime).getTime();
+				return checkInTime >= startMonth && checkInTime <= endMonth;
+			})
+			let freq = 0;
+			let res = "";
+			
+			monthlyClass.forEach((currentClass: StudentData, currentIndex: number) => {
+				let count = 0;
+				
+				monthlyClass.forEach((nextClass: StudentData, nextIndex: number) => {
+					if (nextIndex !== currentIndex && nextClass.className === currentClass.className) {
+						count++;
+					}
+				});
+			
+				//update the most popular class
+				if (count >= freq) {
+					freq = count;
+					res = currentClass.className;
+				}
+			});
+			
+			setMonthlyClass(res);
 			} catch (error) {
 				console.error('error:', error);
 			}
@@ -76,12 +102,7 @@ const Dashboard = () => {
 	fetchData();
 	fetchDataMW();
 	}, []);
-
-	//console.log(students)
-	//console.log(studentsWeek)
-
-
-
+	
 	return (
 		<div className="p-10 flex flex-col gap-10">
 			<div className="flex gap-10">
@@ -96,7 +117,7 @@ const Dashboard = () => {
 				/>
 				<Item
 					title="Most popular class"
-					text="The most popular class this month is Calculus I"
+					text={"The most popular class this month is "+monthlyClass}
 				/>
 			</div>
 			<div className="flex gap-10">
