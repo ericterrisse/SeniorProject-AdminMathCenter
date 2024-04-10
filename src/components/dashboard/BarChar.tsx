@@ -42,35 +42,61 @@ const BarChar = (props: Props) => {
 	const [chartOptions, setChartOptions] = useState({});
 
 	useEffect(() => {
-		setChartData({
-			labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
-			datasets: [
-				{
-					label: "Calculus I",
-					data: [12, 7, 4, 9, 1, 23, 5],
-					borderColor: "orange",
-					backgroundColor: "orange",
-				},
-				{
-					label: "Computer Science I",
-					data: [10, 1, 12, 18, 2, 12, 2],
-					borderColor: "gray",
-					backgroundColor: "gray",
-				},
-				{
-					label: "Statistics",
-					data: [2, 3, 10, 12, 10, 12, 19],
-					borderColor: "rgb(53, 162, 235)",
-					backgroundColor: "rgb(53, 162, 235, 0.4",
-				},
-				{
-					label: "Algebra",
-					data: [5, 2, 7, 12, 2, 5, 1],
-					borderColor: "green",
-					backgroundColor: "green",
-				},
-			],
-		});
+
+		const fetchData = async () => {
+			try {
+			//gets fullname, className, checkInTime to fill table
+			const response = await fetch('http://localhost:3006/api/chart');
+			if (!response.ok) {
+				throw new Error('failed to get data');
+			}
+			const data = await response.json();
+
+			const chartData = data.filter((s)=>{
+				const checkInTime = new Date(s.checkInTime).getTime();
+				const className = s.className;
+				
+			})
+
+			setChartData(data);
+
+
+			} catch (error) {
+				console.error('error:', error);
+			}
+		};
+
+		
+
+		// setChartData({
+		// 	labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+		// 	datasets: [
+		// 		{
+		// 			label: "Calculus I",
+		// 			data: [12, 7, 4, 9, 1, 23, 5],
+		// 			borderColor: "orange",
+		// 			backgroundColor: "orange",
+		// 		},
+		// 		{
+		// 			label: "Computer Science I",
+		// 			data: [10, 1, 12, 18, 2, 12, 2],
+		// 			borderColor: "gray",
+		// 			backgroundColor: "gray",
+		// 		},
+		// 		{
+		// 			label: "Statistics",
+		// 			data: [2, 3, 10, 12, 10, 12, 19],
+		// 			borderColor: "rgb(53, 162, 235)",
+		// 			backgroundColor: "rgb(53, 162, 235, 0.4",
+		// 		},
+		// 		{
+		// 			label: "Algebra",
+		// 			data: [5, 2, 7, 12, 2, 5, 1],
+		// 			borderColor: "green",
+		// 			backgroundColor: "green",
+		// 		},
+		// 	],
+		// });
 		setChartOptions({
 			plugins: {
 				legend: {
