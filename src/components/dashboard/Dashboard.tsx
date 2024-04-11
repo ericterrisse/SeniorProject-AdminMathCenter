@@ -37,12 +37,12 @@ const Dashboard = () => {
 				const checkInTime = new Date(s.checkInTime).getTime();
 				return checkInTime >= startMonth && checkInTime <= endMonth;
 			})
-			let freq = 0;
-			let res = "";
+			let freq = 0; //amount of times most popular class occurs
+			let res = ""; //most popular class
 			
 			monthlyClass.forEach((currentClass: StudentData, currentIndex: number) => {
 				let count = 0;
-				
+
 				monthlyClass.forEach((nextClass: StudentData, nextIndex: number) => {
 					if (nextIndex !== currentIndex && nextClass.className === currentClass.className) {
 						count++;

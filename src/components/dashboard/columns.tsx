@@ -61,6 +61,10 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
+
+		//sortType: "datetime",
+		//sortDescFirst: false,
+
 		cell: ({ row }) => {
             const { checkInTime } = row.original;
             return <div>{dayjs(checkInTime).format("DD/MM/YYYY HH:mm")}</div>

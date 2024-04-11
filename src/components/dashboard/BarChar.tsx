@@ -1,5 +1,6 @@
 "use client";
 
+import { startOfWeek, endOfWeek, startOfMonth, endOfMonth } from 'date-fns';	
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -35,7 +36,7 @@ interface Props {}
 
 const BarChar = (props: Props) => {
 	const [chartData, setChartData] = useState<ChartData>({
-		labels: [],
+		labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
 		datasets: [],
 	});
 
@@ -51,52 +52,52 @@ const BarChar = (props: Props) => {
 				throw new Error('failed to get data');
 			}
 			const data = await response.json();
+			//console.log(data)
 
-			const chartData = data.filter((s)=>{
-				const checkInTime = new Date(s.checkInTime).getTime();
-				const className = s.className;
-				
-			})
+            //const currentDate = new Date();
+            const startWeek = new Date(startOfWeek(new Date, {weekStartsOn: 1}))
+			const endWeek = new Date(endOfWeek(new Date, {weekStartsOn: 1}))
+            
+            const countPerDay: { [key: string]: number[] } = {};
+            data.forEach((s: { className: string; checkInTime: string }) => {
+                const checkInTime = new Date(s.checkInTime);
+                if(checkInTime >= startWeek && checkInTime <= endWeek){
+                    const dayOfWeek = checkInTime.getDay();
+                    const className = s.className;
+                    
+                    //if there isn't already an entry, create one and fill it with an array (size of a week) of 0's
+					if(!countPerDay[className]){
+                        countPerDay[className] = Array(7).fill(0);
+                    }
+                
+                    //adding to count for that dayofweek
+                    countPerDay[className][dayOfWeek]++;
+                }
+            });
 
-			setChartData(data);
+			const classColors: { [key: string]: string } = {
+				"Calc1":"orange",
+				"Calc2":"red",
+				"Algebra":"blue",
+				"PreAlgebra":"gray",
+			}
 
+            // Prepare chart data
+			setChartData({
+                labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+                datasets: Object.keys(countPerDay).map((className, index) => ({
+                    label: className,
+                    data: countPerDay[className],
+                    borderColor: classColors[className],
+                    backgroundColor: classColors[className],
+                })),
+            });
 
 			} catch (error) {
 				console.error('error:', error);
 			}
 		};
 
-		
-
-		// setChartData({
-		// 	labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
-		// 	datasets: [
-		// 		{
-		// 			label: "Calculus I",
-		// 			data: [12, 7, 4, 9, 1, 23, 5],
-		// 			borderColor: "orange",
-		// 			backgroundColor: "orange",
-		// 		},
-		// 		{
-		// 			label: "Computer Science I",
-		// 			data: [10, 1, 12, 18, 2, 12, 2],
-		// 			borderColor: "gray",
-		// 			backgroundColor: "gray",
-		// 		},
-		// 		{
-		// 			label: "Statistics",
-		// 			data: [2, 3, 10, 12, 10, 12, 19],
-		// 			borderColor: "rgb(53, 162, 235)",
-		// 			backgroundColor: "rgb(53, 162, 235, 0.4",
-		// 		},
-		// 		{
-		// 			label: "Algebra",
-		// 			data: [5, 2, 7, 12, 2, 5, 1],
-		// 			borderColor: "green",
-		// 			backgroundColor: "green",
-		// 		},
-		// 	],
-		// });
 		setChartOptions({
 			plugins: {
 				legend: {
@@ -110,6 +111,7 @@ const BarChar = (props: Props) => {
 			maintainAspectRatio: false,
 			responsive: true,
 		});
+		fetchData();
 	}, []);
 
 	return (
