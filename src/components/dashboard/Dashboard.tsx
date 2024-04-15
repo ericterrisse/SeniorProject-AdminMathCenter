@@ -33,7 +33,7 @@ const Dashboard = () => {
 
 			const startMonth = new Date(startOfMonth(new Date)).getTime()
 			const endMonth = new Date(endOfMonth(new Date)).getTime()
-			const monthlyClass = data.filter((s)=>{
+			const monthlyClass = data.filter((s: { checkInTime: string })=>{
 				const checkInTime = new Date(s.checkInTime).getTime();
 				return checkInTime >= startMonth && checkInTime <= endMonth;
 			})
@@ -74,7 +74,7 @@ const Dashboard = () => {
 			const endWeek = new Date(endOfWeek(new Date, {weekStartsOn: 1})).getTime()
 			
 			//finding checkInTimes that occurred 'this' week
-			const studentsWeek = data.filter((s) => {
+			const studentsWeek = data.filter((s: { checkInTime: string }) => {
 				const checkInTime = new Date(s.checkInTime).getTime();
     			return checkInTime > startWeek && checkInTime < endWeek;	
 			})
@@ -85,7 +85,7 @@ const Dashboard = () => {
 			const endMonth = new Date(endOfMonth(new Date)).getTime()
 
 			//finding checkInTimes that occurred 'this' month
-			const studentsMonth = data.filter((s) =>{
+			const studentsMonth = data.filter((s: { checkInTime: string }) =>{
 				const checkInTime = new Date(s.checkInTime).getTime();
 				return checkInTime >= startMonth && checkInTime <= endMonth;
 			})
