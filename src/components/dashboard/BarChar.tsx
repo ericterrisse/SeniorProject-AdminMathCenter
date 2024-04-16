@@ -55,8 +55,8 @@ const BarChar = (props: Props) => {
 			//console.log(data)
 
             //const currentDate = new Date();
-            const startWeek = new Date(startOfWeek(new Date, {weekStartsOn: 1}))
-			const endWeek = new Date(endOfWeek(new Date, {weekStartsOn: 1}))
+            const startWeek = startOfWeek(new Date, {weekStartsOn: 1})
+			const endWeek = endOfWeek(new Date, {weekStartsOn: 1})
             
             const countPerDay: { [key: string]: number[] } = {};
             data.forEach((s: { className: string; checkInTime: string }) => {
@@ -71,7 +71,7 @@ const BarChar = (props: Props) => {
                     }
                 
                     //adding to count for that dayofweek
-                    countPerDay[className][dayOfWeek]++;
+                    countPerDay[className][dayOfWeek-1]++;
                 }
             });
 
