@@ -6,14 +6,13 @@ import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
 
 export type Student = {
-	id: string;
-	name: string;
-	class: string;
+	fullname: string;
+	className: string; 
 	checkInTime: string;
 };
 export const columns: ColumnDef<Student>[] = [
 	{
-		accessorKey: "name",
+		accessorKey: "fullname",
 		header: ({ column }) => {
 			return (
 				<Button
@@ -25,9 +24,14 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
+		cell: ({ row }) => {
+			const { fullname } = row.original;
+			return <div>{fullname}</div>
+
+		},
 	},
 	{
-		accessorKey: "class",
+		accessorKey: "className",
 		header: ({ column }) => {
 			return (
 				<Button
@@ -39,6 +43,10 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
+		cell: ({ row }) => {
+             const { className } = row.original;
+             return <div>{className}</div>;
+        },
 	},
 	{
 		accessorKey: "checkInTime",
@@ -53,10 +61,13 @@ export const columns: ColumnDef<Student>[] = [
 				</Button>
 			);
 		},
-		cell: ({ row }) => {
-			const dateTime: string = row.getValue("checkInTime");
 
-			return <div>{dayjs(dateTime).format("DD/MM/YYYY HH:mm")}</div>;
-		},
+		//sortType: "datetime",
+		//sortDescFirst: false,
+
+		cell: ({ row }) => {
+            const { checkInTime } = row.original;
+            return <div>{dayjs(checkInTime).format("DD/MM/YYYY HH:mm")}</div>
+        },
 	},
 ];
